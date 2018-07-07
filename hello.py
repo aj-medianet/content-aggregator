@@ -4,10 +4,36 @@
 from __future__ import unicode_literals
 from urllib2 import Request, urlopen
 from StringIO import StringIO
+from bs4 import BeautifulSoup
 
 import spacy
 import codecs
 import PyPDF2 
+
+#html to text stuff
+website = "https://en.wikipedia.org/wiki/PDF"
+html = urlopen(website).read()
+soup = BeautifulSoup(html)
+
+# kill all script and style elements
+for script in soup(["script", "style"]):
+    script.extract()    # rip it out
+
+# get text
+websiteText = soup.get_text()
+
+# break into lines and remove leading and trailing space on each
+lines = (line.strip() for line in websiteText.splitlines())
+# break multi-headlines into a line each
+chunks = (phrase.strip() for line in lines for phrase in line.split("  "))
+# drop blank lines
+websiteText = '\n'.join(chunk for chunk in chunks if chunk)
+
+print "website text:" '\n'
+print(websiteText)
+
+
+
 
 #pypdf2 stuff -- pdf --
 url = 'http://www.pdf995.com/samples/pdf.pdf' 
