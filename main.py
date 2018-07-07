@@ -90,6 +90,7 @@ doc2 = nlp(bloombergDoc) # process it
 # Determine semantic similarities
 print "semantic simularities:"
 print ' \n ' 
+
 doc1 = nlp(u"A federal criminal court had in January convicted Sinovel of paying an Austria-based employee of American Superconductor Corp. to steal the source code for software that powered wind turbines. ")
 doc2 = nlp(u"Chinese turbine maker Sinovel Wind Group Co. must pay $59 million for stealing trade secrets from wind technology firm, American Superconductor Corp., a U.S. judge ruled.")
 similarity = doc1.similarity(doc2)
