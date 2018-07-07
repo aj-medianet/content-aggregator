@@ -10,7 +10,7 @@ import codecs
 import PyPDF2 
 
 #pypdf2 stuff
-url = 'https://treatmontana.com/from-sola-bakery.pdf' 
+url = 'http://www.pdf995.com/samples/pdf.pdf' 
 remoteFile = urlopen(Request(url)).read()
 memoryFile = StringIO(remoteFile)
 pdfFile = PyPDF2.PdfFileReader(memoryFile)
