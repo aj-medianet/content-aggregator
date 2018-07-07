@@ -32,7 +32,7 @@ while count < num_pages:
     text += pageObj.extractText()
 
 #check pdf is turned to string
-print(text)
+print('PDF String: \n'text)
 
 #spacy stuff
 
