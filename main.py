@@ -10,7 +10,9 @@ import spacy
 import codecs
 import PyPDF2 
 
-#html to text stuff
+########################
+####  html to text  ####
+########################
 website = "https://en.wikipedia.org/wiki/PDF"
 html = urlopen(website).read()
 soup = BeautifulSoup(html)
@@ -34,8 +36,9 @@ print(websiteText)
 
 
 
-
-#pypdf2 stuff -- pdf --
+######################
+#### PDF to TEXT  ####
+######################
 url = 'http://www.pdf995.com/samples/pdf.pdf' 
 remoteFile = urlopen(Request(url)).read()
 memoryFile = StringIO(remoteFile)
@@ -62,7 +65,10 @@ print "pdf text:" '\n'
 print(text)
 print ' \n \n '
 
-#spacy stuff
+
+######################
+####  spaCy stuff ####
+######################
 
 # Load English tokenizer, tagger, parser, NER and word vectors
 nlp = spacy.load('en_core_web_sm') 
