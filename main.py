@@ -13,7 +13,7 @@ import PyPDF2
 ########################
 ####  html to text  ####
 ########################
-website = "https://en.wikipedia.org/wiki/PDF"
+website = "https://en.wikipedia.org/wiki/Nibiru_cataclysm"
 html = urlopen(website).read()
 soup = BeautifulSoup(html)
 
@@ -97,7 +97,12 @@ doc2 = nlp(bloombergDoc) # process it
 print "semantic simularities:"
 print ' \n ' 
 
-doc1 = nlp(u"A federal criminal court had in January convicted Sinovel of paying an Austria-based employee of American Superconductor Corp. to steal the source code for software that powered wind turbines. ")
-doc2 = nlp(u"Chinese turbine maker Sinovel Wind Group Co. must pay $59 million for stealing trade secrets from wind technology firm, American Superconductor Corp., a U.S. judge ruled.")
+#doc1 = nlp(u"A federal criminal court had in January convicted Sinovel of paying an Austria-based employee of American Superconductor Corp. to steal the source code for #software that powered wind turbines. ")
+#doc2 = nlp(u"Chinese turbine maker Sinovel Wind Group Co. must pay $59 million for stealing trade secrets from wind technology firm, American Superconductor Corp., a U.S. #judge ruled.")
 similarity = doc1.similarity(doc2)
-print(doc1.text, doc2.text, similarity)
+print(doc1.text) 
+print('\n \n \n') 
+print(doc2.text) 
+print('\n \n \n') 
+print("simularity:") 
+print(similarity)
