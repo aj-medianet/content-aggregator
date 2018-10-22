@@ -29,7 +29,9 @@ Intall python libraries - you must already have pip installed:
 7. python -m spacy download en
 
 Then run the program:
+
 8. python main.py
 
 To get out of the virtual envirnment run:
+
 9. deactivate 
