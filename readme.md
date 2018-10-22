@@ -21,14 +21,20 @@ To run the program from the command line with python2:
 2. cd content-aggregator/
 3. source venv/bin/activate
 
-Intall python libraries - you must already have pip installed 
+Intall python libraries - you must already have pip installed:
+
 4. pip install bs4
+
 5. pip install spacy
+
 6. pip install PyPDF2
+
 7. python -m spacy download en
 
-Then run the program 
+Then run the program:
+
 8. python main.py
 
 To get out of the virtual envirnment run:
+
 9. deactivate 
