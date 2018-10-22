@@ -13,7 +13,7 @@ import PyPDF2
 ########################
 ####  html to text  ####
 ########################
-website = "https://en.wikipedia.org/wiki/Nibiru_cataclysm"
+website = "https://www.blog.google/products/earth/finding-my-way-back-antarctica-help-google-earth/"
 html = urlopen(website).read()
 soup = BeautifulSoup(html)
 
@@ -39,7 +39,7 @@ print(websiteText)
 ######################
 #### PDF to TEXT  ####
 ######################
-url = 'http://www.pdf995.com/samples/pdf.pdf' 
+url = 'http://infolab.stanford.edu/pub/papers/google.pdf' 
 remoteFile = urlopen(Request(url)).read()
 memoryFile = StringIO(remoteFile)
 pdfFile = PyPDF2.PdfFileReader(memoryFile)
